@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="10" alignment="CENTER" style="-fx-background-color: #f8f8f8; -fx-padding: 15;"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.calculator.Controller">
+
+    <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false"
+               style="-fx-font-size: 20; -fx-background-color: #f0f0f0; -fx-border-color: #cccccc; -fx-border-width: 1px; -fx-border-radius: 5px;">
+        <VBox.margin>
+            <Insets bottom="10"/>
+        </VBox.margin>
+        <prefHeight>50</prefHeight>
+    </TextField>
+
+    <GridPane hgap="5" vgap="5" alignment="CENTER">
+        <Button text="C" prefWidth="60" prefHeight="60" onAction="#handleClearButton"
+                style="-fx-background-color: #ff6b6b; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Button>
+
+        <Button text="DEL" prefWidth="60" prefHeight="60" onAction="#handleDeleteButton"
+                style="-fx-background-color: #ff9e7d; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16; -fx-background-radius: 5;">
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Button>
+
+        <Button text="÷" prefWidth="60" prefHeight="60" onAction="#handleOperationButton"
+                style="-fx-background-color: #4dabf7; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>2</GridPane.columnIndex>
+        </Button>
+
+        <Button text="×" prefWidth="60" prefHeight="60" onAction="#handleOperationButton"
+                style="-fx-background-color: #4dabf7; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>0</GridPane.rowIndex>
+            <GridPane.columnIndex>3</GridPane.columnIndex>
+        </Button>
+
+        <Button text="7" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>1</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Button>
+
+        <Button text="8" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>1</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Button>
+
+        <Button text="9" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>1</GridPane.rowIndex>
+            <GridPane.columnIndex>2</GridPane.columnIndex>
+        </Button>
+
+        <Button text="-" prefWidth="60" prefHeight="60" onAction="#handleOperationButton"
+                style="-fx-background-color: #4dabf7; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>1</GridPane.rowIndex>
+            <GridPane.columnIndex>3</GridPane.columnIndex>
+        </Button>
+
+        <Button text="4" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>2</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Button>
+
+        <Button text="5" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>2</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Button>
+
+        <Button text="6" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>2</GridPane.rowIndex>
+            <GridPane.columnIndex>2</GridPane.columnIndex>
+        </Button>
+
+        <Button text="+" prefWidth="60" prefHeight="60" onAction="#handleOperationButton"
+                style="-fx-background-color: #4dabf7; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>2</GridPane.rowIndex>
+            <GridPane.columnIndex>3</GridPane.columnIndex>
+        </Button>
+
+        <Button text="1" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>3</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Button>
+
+        <Button text="2" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>3</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Button>
+
+        <Button text="3" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>3</GridPane.rowIndex>
+            <GridPane.columnIndex>2</GridPane.columnIndex>
+        </Button>
+
+        <Button text="0" prefWidth="60" prefHeight="60" onAction="#handleNumberButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>4</GridPane.rowIndex>
+            <GridPane.columnIndex>1</GridPane.columnIndex>
+        </Button>
+
+        <Button text="." prefWidth="60" prefHeight="60" onAction="#handleDecimalButton"
+                style="-fx-background-color: #dddddd; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>4</GridPane.rowIndex>
+            <GridPane.columnIndex>0</GridPane.columnIndex>
+        </Button>
+
+        <Button text="=" prefWidth="60" prefHeight="60" onAction="#handleEqualsButton"
+                style="-fx-background-color: #38d9a9; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18; -fx-background-radius: 5;">
+            <GridPane.rowIndex>3</GridPane.rowIndex>
+            <GridPane.columnSpan>1</GridPane.columnSpan>
+            <GridPane.rowSpan>2</GridPane.rowSpan>
+            <GridPane.columnIndex>3</GridPane.columnIndex>
+        </Button>
+    </GridPane>
+</VBox>
